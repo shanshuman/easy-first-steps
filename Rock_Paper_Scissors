@@ -1,0 +1,36 @@
+import random #importing random module
+
+def rps():
+    "This is the function used to built the game of rock, paper and scissors"
+
+    "Three alphabets that are used in the game - r means rock, p means paper and s means scissors"
+    game_words = ["r", "p", "s"]
+
+    "computer will choose its word using random function"
+    computer_choice = random.choice(['r', 'p', 's'])
+
+    """below while loop is to make sure that only r, p or s
+    are entered by the user any other alphabet will give 
+    invalid entry error"""
+    while True:
+        user_input = input("Say a word - 'r' for Rock, 'p' for Paper and 's' for Scissors : \n")
+        if user_input in game_words:
+            break
+        else:
+            print("Invalid entry. Try again")
+    "Rules of the game:" \
+    "Rock beats scissors, scissors beat paper" \
+    "paper beats rock and rock beats paper"
+
+    if user_input == computer_choice:
+        return ("It's a draw")
+    elif user_input == "r" and computer_choice == "s":
+        return ("User won!")
+    elif user_input == 'p' and computer_choice == "r":
+        return ("User won!")
+    elif user_input == "s" and computer_choice == "p":
+        return ("User won!")
+    else:
+        return ("User lost:(")
+
+print(rps())
