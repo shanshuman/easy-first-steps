@@ -22,7 +22,7 @@ def rps():
     "Rock beats scissors, scissors beat paper" \
     "paper beats rock and scissors beats paper"
 
-    print (f"User chose {user_input} and computer chose {computer_choice}")
+    print (f"User chose {user_input}, computer chose {computer_choice} ... and ...")
     
     if user_input == computer_choice:
         return ("It's a draw")
